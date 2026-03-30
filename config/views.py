@@ -20,4 +20,5 @@ def EndpointList(request):
         "users": "/api/users/",
         "tables": "/api/tables/",
         "payments": "/api/payments/",
+        "logs": "/api/logs/",
     })

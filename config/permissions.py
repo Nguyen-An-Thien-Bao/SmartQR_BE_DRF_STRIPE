@@ -73,3 +73,18 @@ class IsTenantAdminOrReadOnly(BasePermission):
         return (
             obj_tenant_admin == tenant_admin or obj_belong_to == tenant_admin
         )
+    
+class CanViewLogPermission(BasePermission):
+    def has_permission(self, request, view):
+        user = request.user
+
+        if not user.is_authenticated:
+            return False
+
+        if user.is_superuser:
+            return True
+
+        if user.role == "tenantAdmin":
+            return True
+
+        return False
