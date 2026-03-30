@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -160,7 +162,8 @@ SPECTACULAR_SETTINGS = {
 
 AUTH_USER_MODEL = "rbac.User"
 
-STRIPE_SECRET_KEY = "sk_test_51TFxhgCrYy5w1utExUoWezdkXU00tM0YZB18kjPG1cQGWitj1RlS9RVpe5hiYr4lAkEZ8QY9fljNzt488ksLT9Kr00BNn2mwzM"
-STRIPE_WEBHOOK_SECRET = "whsec_19d00d52fb817df1495a7eb8cf6b304471ebbfca60f708faf0f19e30b916ca53"
+import os
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
 
 CORS_ALLOW_ALL_ORIGINS = True
