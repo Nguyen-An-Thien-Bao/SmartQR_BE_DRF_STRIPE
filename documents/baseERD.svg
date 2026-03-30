@@ -1,0 +1,429 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="589pt" height="852pt" viewBox="0.00 0.00 589.00 852.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 848)">
+<title>model_graph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-848 584.57,-848 584.57,4 -4,4"/>
+<!-- django_contrib_auth_models_AbstractUser -->
+<g id="node1" class="node">
+<title>django_contrib_auth_models_AbstractUser</title>
+<polygon fill="white" stroke="none" points="34.91,-95.2 34.91,-263.2 219.72,-263.2 219.72,-95.2 34.91,-95.2"/>
+<polygon fill="#1b563f" stroke="none" points="35.91,-232.2 35.91,-262.2 218.72,-262.2 218.72,-232.2 35.91,-232.2"/>
+<text xml:space="preserve" text-anchor="start" x="89.72" y="-249.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="97.72" y="-249.2" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    AbstractUser</text>
+<text xml:space="preserve" text-anchor="start" x="40.91" y="-239.2" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">&lt;</text>
+<text xml:space="preserve" text-anchor="start" x="46.61" y="-239.2" font-family="Roboto" font-weight="bold" font-style="italic" font-size="10.00" fill="white">AbstractBaseUser,PermissionsMixin</text>
+<text xml:space="preserve" text-anchor="start" x="198.02" y="-239.2" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">&gt;    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-224" font-family="Roboto" font-size="8.00">date_joined</text>
+<text xml:space="preserve" text-anchor="start" x="83.23" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-224" font-family="Roboto" font-size="8.00">DateTimeField</text>
+<text xml:space="preserve" text-anchor="start" x="181.98" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-210.4" font-family="Roboto" font-size="8.00" fill="#7b7b7b">email</text>
+<text xml:space="preserve" text-anchor="start" x="63.68" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-210.4" font-family="Roboto" font-size="8.00" fill="#7b7b7b">EmailField</text>
+<text xml:space="preserve" text-anchor="start" x="169.1" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-196.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-196.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">first_name</text>
+<text xml:space="preserve" text-anchor="start" x="80.13" y="-196.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-196.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-196.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="165.54" y="-196.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-183.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-183.2" font-family="Roboto" font-size="8.00">is_active</text>
+<text xml:space="preserve" text-anchor="start" x="74.35" y="-183.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-183.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-183.2" font-family="Roboto" font-size="8.00">BooleanField</text>
+<text xml:space="preserve" text-anchor="start" x="176.65" y="-183.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-169.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-169.6" font-family="Roboto" font-size="8.00">is_staff</text>
+<text xml:space="preserve" text-anchor="start" x="69.47" y="-169.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-169.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-169.6" font-family="Roboto" font-size="8.00">BooleanField</text>
+<text xml:space="preserve" text-anchor="start" x="176.65" y="-169.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-156" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-156" font-family="Roboto" font-style="italic" font-size="8.00">is_superuser</text>
+<text xml:space="preserve" text-anchor="start" x="86.81" y="-156" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-156" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-156" font-family="Roboto" font-style="italic" font-size="8.00">BooleanField</text>
+<text xml:space="preserve" text-anchor="start" x="177.09" y="-156" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-142.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-142.4" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">last_login</text>
+<text xml:space="preserve" text-anchor="start" x="77.92" y="-142.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-142.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-142.4" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text xml:space="preserve" text-anchor="start" x="181.98" y="-142.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-128.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-128.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">last_name</text>
+<text xml:space="preserve" text-anchor="start" x="78.35" y="-128.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-128.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-128.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="165.54" y="-128.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-115.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-115.2" font-family="Roboto" font-style="italic" font-size="8.00">password</text>
+<text xml:space="preserve" text-anchor="start" x="76.59" y="-115.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-115.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-115.2" font-family="Roboto" font-style="italic" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="166.88" y="-115.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="37.91" y="-101.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="45.91" y="-101.6" font-family="Roboto" font-size="8.00">username</text>
+<text xml:space="preserve" text-anchor="start" x="76.57" y="-101.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="125.55" y="-101.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="133.55" y="-101.6" font-family="Roboto" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="165.54" y="-101.6" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="34.91,-95.2 34.91,-263.2 219.72,-263.2 219.72,-95.2 34.91,-95.2"/>
+</g>
+<!-- django_contrib_auth_base_user_AbstractBaseUser -->
+<g id="node7" class="node">
+<title>django_contrib_auth_base_user_AbstractBaseUser</title>
+<polygon fill="white" stroke="none" points="8,-6.8 8,-29.2 110.64,-29.2 110.64,-6.8 8,-6.8"/>
+<polygon fill="#1b563f" stroke="none" points="8,-6.8 8,-29.2 110.64,-29.2 110.64,-6.8 8,-6.8"/>
+<text xml:space="preserve" text-anchor="start" x="12" y="-15.4" font-family="Roboto" font-size="8.00">  </text>
+<text xml:space="preserve" text-anchor="start" x="16" y="-15.4" font-family="Roboto" font-size="12.00" fill="white">AbstractBaseUser</text>
+<text xml:space="preserve" text-anchor="start" x="102.64" y="-15.4" font-family="Roboto" font-size="8.00">  </text>
+</g>
+<!-- django_contrib_auth_models_AbstractUser&#45;&gt;django_contrib_auth_base_user_AbstractBaseUser -->
+<g id="edge1" class="edge">
+<title>django_contrib_auth_models_AbstractUser-&gt;django_contrib_auth_base_user_AbstractBaseUser</title>
+<path fill="none" stroke="black" d="M90.33,-91.61C83.3,-75.14 76.44,-59.07 70.96,-46.26"/>
+<polygon fill="none" stroke="black" points="74.28,-45.12 67.13,-37.29 67.84,-47.87 74.28,-45.12"/>
+<text xml:space="preserve" text-anchor="middle" x="99.08" y="-66" font-family="Roboto" font-size="8.00"> abstract</text>
+<text xml:space="preserve" text-anchor="middle" x="99.08" y="-56.4" font-family="Roboto" font-size="8.00">inheritance</text>
+</g>
+<!-- django_contrib_auth_models_PermissionsMixin -->
+<g id="node8" class="node">
+<title>django_contrib_auth_models_PermissionsMixin</title>
+<polygon fill="white" stroke="none" points="144.65,-6.8 144.65,-29.2 247.99,-29.2 247.99,-6.8 144.65,-6.8"/>
+<polygon fill="#1b563f" stroke="none" points="144.65,-6.8 144.65,-29.2 247.99,-29.2 247.99,-6.8 144.65,-6.8"/>
+<text xml:space="preserve" text-anchor="start" x="148.65" y="-15.4" font-family="Roboto" font-size="8.00">  </text>
+<text xml:space="preserve" text-anchor="start" x="152.65" y="-15.4" font-family="Roboto" font-size="12.00" fill="white">PermissionsMixin</text>
+<text xml:space="preserve" text-anchor="start" x="239.99" y="-15.4" font-family="Roboto" font-size="8.00">  </text>
+</g>
+<!-- django_contrib_auth_models_AbstractUser&#45;&gt;django_contrib_auth_models_PermissionsMixin -->
+<g id="edge2" class="edge">
+<title>django_contrib_auth_models_AbstractUser-&gt;django_contrib_auth_models_PermissionsMixin</title>
+<path fill="none" stroke="black" d="M164.85,-91.61C171.99,-75.14 178.95,-59.07 184.5,-46.26"/>
+<polygon fill="none" stroke="black" points="187.63,-47.86 188.39,-37.29 181.2,-45.08 187.63,-47.86"/>
+<text xml:space="preserve" text-anchor="middle" x="197.41" y="-66" font-family="Roboto" font-size="8.00"> abstract</text>
+<text xml:space="preserve" text-anchor="middle" x="197.41" y="-56.4" font-family="Roboto" font-size="8.00">inheritance</text>
+</g>
+<!-- rbac_models_User -->
+<g id="node2" class="node">
+<title>rbac_models_User</title>
+<polygon fill="white" stroke="none" points="208.66,-326.4 208.66,-535.2 345.98,-535.2 345.98,-326.4 208.66,-326.4"/>
+<polygon fill="#1b563f" stroke="none" points="209.66,-504.2 209.66,-534.2 344.98,-534.2 344.98,-504.2 209.66,-504.2"/>
+<text xml:space="preserve" text-anchor="start" x="258.32" y="-521.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="266.32" y="-521.2" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    User</text>
+<text xml:space="preserve" text-anchor="start" x="239.67" y="-511.2" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">&lt;</text>
+<text xml:space="preserve" text-anchor="start" x="245.37" y="-511.2" font-family="Roboto" font-weight="bold" font-style="italic" font-size="10.00" fill="white">AbstractUser</text>
+<text xml:space="preserve" text-anchor="start" x="299.26" y="-511.2" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">&gt;    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-496" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-496" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text xml:space="preserve" text-anchor="start" x="226.33" y="-496" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-496" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-496" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text xml:space="preserve" text-anchor="start" x="326.33" y="-496" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-482.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-482.4" font-family="Roboto" font-weight="bold" font-size="8.00" fill="#7b7b7b">created_by</text>
+<text xml:space="preserve" text-anchor="start" x="257.42" y="-482.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-482.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-482.4" font-family="Roboto" font-weight="bold" font-size="8.00" fill="#7b7b7b">ForeignKey (id)</text>
+<text xml:space="preserve" text-anchor="start" x="334.98" y="-482.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-468.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-468.8" font-family="Roboto" font-style="italic" font-size="8.00">date_joined</text>
+<text xml:space="preserve" text-anchor="start" x="257.43" y="-468.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-468.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-468.8" font-family="Roboto" font-style="italic" font-size="8.00">DateTimeField</text>
+<text xml:space="preserve" text-anchor="start" x="328.98" y="-468.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-455.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-455.2" font-family="Roboto" font-size="8.00">email</text>
+<text xml:space="preserve" text-anchor="start" x="237.43" y="-455.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-455.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-455.2" font-family="Roboto" font-size="8.00">EmailField</text>
+<text xml:space="preserve" text-anchor="start" x="316.1" y="-455.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-441.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-441.6" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">first_name</text>
+<text xml:space="preserve" text-anchor="start" x="253.88" y="-441.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-441.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-441.6" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="313.88" y="-441.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-428" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-428" font-family="Roboto" font-style="italic" font-size="8.00">is_active</text>
+<text xml:space="preserve" text-anchor="start" x="248.09" y="-428" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-428" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-428" font-family="Roboto" font-style="italic" font-size="8.00">BooleanField</text>
+<text xml:space="preserve" text-anchor="start" x="324.09" y="-428" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-414.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-414.4" font-family="Roboto" font-style="italic" font-size="8.00">is_staff</text>
+<text xml:space="preserve" text-anchor="start" x="242.77" y="-414.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-414.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-414.4" font-family="Roboto" font-style="italic" font-size="8.00">BooleanField</text>
+<text xml:space="preserve" text-anchor="start" x="324.09" y="-414.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-400.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-400.8" font-family="Roboto" font-style="italic" font-size="8.00">is_superuser</text>
+<text xml:space="preserve" text-anchor="start" x="260.55" y="-400.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-400.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-400.8" font-family="Roboto" font-style="italic" font-size="8.00">BooleanField</text>
+<text xml:space="preserve" text-anchor="start" x="324.09" y="-400.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-387.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-387.2" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">last_login</text>
+<text xml:space="preserve" text-anchor="start" x="251.66" y="-387.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-387.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-387.2" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text xml:space="preserve" text-anchor="start" x="328.98" y="-387.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-373.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-373.6" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">last_name</text>
+<text xml:space="preserve" text-anchor="start" x="252.54" y="-373.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-373.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-373.6" font-family="Roboto" font-style="italic" font-size="8.00" fill="#7b7b7b">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="313.88" y="-373.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-360" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-360" font-family="Roboto" font-style="italic" font-size="8.00">password</text>
+<text xml:space="preserve" text-anchor="start" x="250.33" y="-360" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-360" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-360" font-family="Roboto" font-style="italic" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="313.88" y="-360" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-346.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-346.4" font-family="Roboto" font-size="8.00">role</text>
+<text xml:space="preserve" text-anchor="start" x="232.09" y="-346.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-346.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-346.4" font-family="Roboto" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="312.54" y="-346.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="211.66" y="-332.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="219.66" y="-332.8" font-family="Roboto" font-size="8.00">username</text>
+<text xml:space="preserve" text-anchor="start" x="250.31" y="-332.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="272.55" y="-332.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="280.55" y="-332.8" font-family="Roboto" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="312.54" y="-332.8" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="208.66,-326.4 208.66,-535.2 345.98,-535.2 345.98,-326.4 208.66,-326.4"/>
+</g>
+<!-- rbac_models_User&#45;&gt;django_contrib_auth_models_AbstractUser -->
+<g id="edge6" class="edge">
+<title>rbac_models_User-&gt;django_contrib_auth_models_AbstractUser</title>
+<path fill="none" stroke="black" d="M212.83,-322.5C203.72,-307.32 194.38,-291.8 185.4,-276.84"/>
+<polygon fill="none" stroke="black" points="188.47,-275.17 180.32,-268.4 182.47,-278.78 188.47,-275.17"/>
+<text xml:space="preserve" text-anchor="middle" x="215.59" y="-297.2" font-family="Roboto" font-size="8.00"> abstract</text>
+<text xml:space="preserve" text-anchor="middle" x="215.59" y="-287.6" font-family="Roboto" font-size="8.00">inheritance</text>
+</g>
+<!-- rbac_models_User&#45;&gt;rbac_models_User -->
+<g id="edge3" class="edge">
+<title>rbac_models_User-&gt;rbac_models_User</title>
+<path fill="none" stroke="black" d="M361.66,-449.23C368.05,-445.13 371.98,-438.99 371.98,-430.8 371.98,-419.65 364.69,-412.29 353.83,-408.72"/>
+<ellipse fill="black" stroke="black" cx="357.91" cy="-450.98" rx="4" ry="4"/>
+<text xml:space="preserve" text-anchor="middle" x="401.3" y="-428.4" font-family="Roboto" font-size="8.00"> created_by (staff)</text>
+</g>
+<!-- django_contrib_auth_models_Group -->
+<g id="node9" class="node">
+<title>django_contrib_auth_models_Group</title>
+<polygon fill="white" stroke="none" points="253.99,-168 253.99,-190.4 300.65,-190.4 300.65,-168 253.99,-168"/>
+<polygon fill="#1b563f" stroke="none" points="253.99,-168 253.99,-190.4 300.65,-190.4 300.65,-168 253.99,-168"/>
+<text xml:space="preserve" text-anchor="start" x="257.99" y="-176.6" font-family="Roboto" font-size="8.00">  </text>
+<text xml:space="preserve" text-anchor="start" x="261.99" y="-176.6" font-family="Roboto" font-size="12.00" fill="white">Group</text>
+<text xml:space="preserve" text-anchor="start" x="292.65" y="-176.6" font-family="Roboto" font-size="8.00">  </text>
+</g>
+<!-- rbac_models_User&#45;&gt;django_contrib_auth_models_Group -->
+<g id="edge4" class="edge">
+<title>rbac_models_User-&gt;django_contrib_auth_models_Group</title>
+<path fill="none" stroke="black" d="M277.32,-313.73C277.32,-273.22 277.32,-231.48 277.32,-205.69"/>
+<ellipse fill="black" stroke="black" cx="277.32" cy="-318" rx="4" ry="4"/>
+<ellipse fill="black" stroke="black" cx="277.32" cy="-201.44" rx="4" ry="4"/>
+<text xml:space="preserve" text-anchor="middle" x="299.54" y="-292.4" font-family="Roboto" font-size="8.00"> groups (user)</text>
+</g>
+<!-- django_contrib_auth_models_Permission -->
+<g id="node10" class="node">
+<title>django_contrib_auth_models_Permission</title>
+<polygon fill="white" stroke="none" points="334.65,-168 334.65,-190.4 403.99,-190.4 403.99,-168 334.65,-168"/>
+<polygon fill="#1b563f" stroke="none" points="334.65,-168 334.65,-190.4 403.99,-190.4 403.99,-168 334.65,-168"/>
+<text xml:space="preserve" text-anchor="start" x="338.65" y="-176.6" font-family="Roboto" font-size="8.00">  </text>
+<text xml:space="preserve" text-anchor="start" x="342.65" y="-176.6" font-family="Roboto" font-size="12.00" fill="white">Permission</text>
+<text xml:space="preserve" text-anchor="start" x="395.99" y="-176.6" font-family="Roboto" font-size="8.00">  </text>
+</g>
+<!-- rbac_models_User&#45;&gt;django_contrib_auth_models_Permission -->
+<g id="edge5" class="edge">
+<title>rbac_models_User-&gt;django_contrib_auth_models_Permission</title>
+<path fill="none" stroke="black" d="M321.69,-314.21C322.92,-310.9 324.13,-307.63 325.32,-304.4 337.91,-270.22 351.86,-230.51 360.61,-205.37"/>
+<ellipse fill="black" stroke="black" cx="320.18" cy="-318.25" rx="4" ry="4"/>
+<ellipse fill="black" stroke="black" cx="362" cy="-201.37" rx="4" ry="4"/>
+<text xml:space="preserve" text-anchor="middle" x="370.57" y="-292.4" font-family="Roboto" font-size="8.00"> user_permissions (user)</text>
+</g>
+<!-- orders_models_Order -->
+<g id="node3" class="node">
+<title>orders_models_Order</title>
+<polygon fill="white" stroke="none" points="253.55,-602.4 253.55,-694.4 385.08,-694.4 385.08,-602.4 253.55,-602.4"/>
+<polygon fill="#1b563f" stroke="none" points="254.55,-671.4 254.55,-693.4 384.08,-693.4 384.08,-671.4 254.55,-671.4"/>
+<text xml:space="preserve" text-anchor="start" x="291.99" y="-680.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="299.99" y="-680.4" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    Order    </text>
+<text xml:space="preserve" text-anchor="start" x="256.55" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="264.55" y="-663.2" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text xml:space="preserve" text-anchor="start" x="271.22" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="311.65" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="319.65" y="-663.2" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text xml:space="preserve" text-anchor="start" x="365.43" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="256.55" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="264.55" y="-649.6" font-family="Roboto" font-weight="bold" font-size="8.00">customer</text>
+<text xml:space="preserve" text-anchor="start" x="296.1" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="311.65" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="319.65" y="-649.6" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text xml:space="preserve" text-anchor="start" x="374.08" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="256.55" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="264.55" y="-636" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text xml:space="preserve" text-anchor="start" x="297.42" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="311.65" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="319.65" y="-636" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text xml:space="preserve" text-anchor="start" x="368.08" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="256.55" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="264.55" y="-622.4" font-family="Roboto" font-size="8.00">status</text>
+<text xml:space="preserve" text-anchor="start" x="282.78" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="311.65" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="319.65" y="-622.4" font-family="Roboto" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="351.65" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="256.55" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="264.55" y="-608.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">updated_at</text>
+<text xml:space="preserve" text-anchor="start" x="299.65" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="311.65" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="319.65" y="-608.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text xml:space="preserve" text-anchor="start" x="368.08" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="253.55,-602.4 253.55,-694.4 385.08,-694.4 385.08,-602.4 253.55,-602.4"/>
+</g>
+<!-- orders_models_Order&#45;&gt;rbac_models_User -->
+<g id="edge7" class="edge">
+<title>orders_models_Order-&gt;rbac_models_User</title>
+<path fill="none" stroke="black" d="M308.12,-589.94C305.06,-574.2 301.63,-556.61 298.21,-539.05"/>
+<ellipse fill="black" stroke="black" cx="308.93" cy="-594.06" rx="4" ry="4"/>
+<text xml:space="preserve" text-anchor="middle" x="332.64" y="-559.6" font-family="Roboto" font-size="8.00"> customer (orders)</text>
+</g>
+<!-- orders_models_OrderItem -->
+<g id="node4" class="node">
+<title>orders_models_OrderItem</title>
+<polygon fill="white" stroke="none" points="328.77,-761.6 328.77,-840 473.87,-840 473.87,-761.6 328.77,-761.6"/>
+<polygon fill="#1b563f" stroke="none" points="329.77,-817 329.77,-839 472.87,-839 472.87,-817 329.77,-817"/>
+<text xml:space="preserve" text-anchor="start" x="364" y="-826" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="372" y="-826" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    OrderItem    </text>
+<text xml:space="preserve" text-anchor="start" x="331.77" y="-808.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="339.77" y="-808.8" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text xml:space="preserve" text-anchor="start" x="346.44" y="-808.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="389.99" y="-808.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="397.99" y="-808.8" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text xml:space="preserve" text-anchor="start" x="443.77" y="-808.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="331.77" y="-795.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="339.77" y="-795.2" font-family="Roboto" font-weight="bold" font-size="8.00">menu_item</text>
+<text xml:space="preserve" text-anchor="start" x="377.99" y="-795.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="389.99" y="-795.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="397.99" y="-795.2" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text xml:space="preserve" text-anchor="start" x="452.42" y="-795.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="331.77" y="-781.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="339.77" y="-781.6" font-family="Roboto" font-weight="bold" font-size="8.00">order</text>
+<text xml:space="preserve" text-anchor="start" x="358.87" y="-781.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="389.99" y="-781.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="397.99" y="-781.6" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text xml:space="preserve" text-anchor="start" x="452.42" y="-781.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="331.77" y="-768" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="339.77" y="-768" font-family="Roboto" font-size="8.00">quantity</text>
+<text xml:space="preserve" text-anchor="start" x="365.99" y="-768" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="389.99" y="-768" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="397.99" y="-768" font-family="Roboto" font-size="8.00">PositiveIntegerField</text>
+<text xml:space="preserve" text-anchor="start" x="462.87" y="-768" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="328.77,-761.6 328.77,-840 473.87,-840 473.87,-761.6 328.77,-761.6"/>
+</g>
+<!-- orders_models_OrderItem&#45;&gt;orders_models_Order -->
+<g id="edge8" class="edge">
+<title>orders_models_OrderItem-&gt;orders_models_Order</title>
+<path fill="none" stroke="black" d="M374.37,-750.36C365.24,-733.62 355.05,-714.95 345.95,-698.25"/>
+<ellipse fill="black" stroke="black" cx="376.32" cy="-753.95" rx="4" ry="4"/>
+<text xml:space="preserve" text-anchor="middle" x="389.43" y="-732.4" font-family="Roboto" font-size="8.00"> order (items)</text>
+</g>
+<!-- products_models_MenuItem -->
+<g id="node6" class="node">
+<title>products_models_MenuItem</title>
+<polygon fill="white" stroke="none" points="435.33,-588.8 435.33,-708 567.31,-708 567.31,-588.8 435.33,-588.8"/>
+<polygon fill="#1b563f" stroke="none" points="436.33,-685 436.33,-707 566.31,-707 566.31,-685 436.33,-685"/>
+<text xml:space="preserve" text-anchor="start" x="464.82" y="-694" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="472.82" y="-694" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    MenuItem    </text>
+<text xml:space="preserve" text-anchor="start" x="438.33" y="-676.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="446.33" y="-676.8" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text xml:space="preserve" text-anchor="start" x="453" y="-676.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="493.88" y="-676.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="501.88" y="-676.8" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text xml:space="preserve" text-anchor="start" x="547.66" y="-676.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="438.33" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="446.33" y="-663.2" font-family="Roboto" font-weight="bold" font-size="8.00">category</text>
+<text xml:space="preserve" text-anchor="start" x="475.64" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="493.88" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="501.88" y="-663.2" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text xml:space="preserve" text-anchor="start" x="556.31" y="-663.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="438.33" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="446.33" y="-649.6" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text xml:space="preserve" text-anchor="start" x="479.19" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="493.88" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="501.88" y="-649.6" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text xml:space="preserve" text-anchor="start" x="550.3" y="-649.6" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="438.33" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="446.33" y="-636" font-family="Roboto" font-size="8.00">description</text>
+<text xml:space="preserve" text-anchor="start" x="481.88" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="493.88" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="501.88" y="-636" font-family="Roboto" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="533.87" y="-636" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="438.33" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="446.33" y="-622.4" font-family="Roboto" font-size="8.00">name</text>
+<text xml:space="preserve" text-anchor="start" x="463.65" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="493.88" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="501.88" y="-622.4" font-family="Roboto" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="533.87" y="-622.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="438.33" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="446.33" y="-608.8" font-family="Roboto" font-size="8.00">price</text>
+<text xml:space="preserve" text-anchor="start" x="462.32" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="493.88" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="501.88" y="-608.8" font-family="Roboto" font-size="8.00">DecimalField</text>
+<text xml:space="preserve" text-anchor="start" x="545.42" y="-608.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="438.33" y="-595.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="446.33" y="-595.2" font-family="Roboto" font-size="8.00" fill="#7b7b7b">size</text>
+<text xml:space="preserve" text-anchor="start" x="458.77" y="-595.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="493.88" y="-595.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="501.88" y="-595.2" font-family="Roboto" font-size="8.00" fill="#7b7b7b">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="533.87" y="-595.2" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="435.33,-588.8 435.33,-708 567.31,-708 567.31,-588.8 435.33,-588.8"/>
+</g>
+<!-- orders_models_OrderItem&#45;&gt;products_models_MenuItem -->
+<g id="edge9" class="edge">
+<title>orders_models_OrderItem-&gt;products_models_MenuItem</title>
+<path fill="none" stroke="black" d="M433.94,-750.74C442.18,-738.34 451.15,-724.85 459.77,-711.88"/>
+<ellipse fill="black" stroke="black" cx="431.67" cy="-754.16" rx="4" ry="4"/>
+<text xml:space="preserve" text-anchor="middle" x="483.54" y="-732.4" font-family="Roboto" font-size="8.00"> menu_item (orderitem)</text>
+</g>
+<!-- products_models_Category -->
+<g id="node5" class="node">
+<title>products_models_Category</title>
+<polygon fill="white" stroke="none" points="456.77,-398.4 456.77,-463.2 561.87,-463.2 561.87,-398.4 456.77,-398.4"/>
+<polygon fill="#1b563f" stroke="none" points="457.77,-440.2 457.77,-462.2 560.87,-462.2 560.87,-440.2 457.77,-440.2"/>
+<text xml:space="preserve" text-anchor="start" x="475.6" y="-449.2" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="483.6" y="-449.2" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    Category    </text>
+<text xml:space="preserve" text-anchor="start" x="459.77" y="-432" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="467.77" y="-432" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text xml:space="preserve" text-anchor="start" x="474.44" y="-432" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="497.09" y="-432" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="505.09" y="-432" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text xml:space="preserve" text-anchor="start" x="550.87" y="-432" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="459.77" y="-418.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="467.77" y="-418.4" font-family="Roboto" font-size="8.00">name</text>
+<text xml:space="preserve" text-anchor="start" x="485.09" y="-418.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="497.09" y="-418.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="505.09" y="-418.4" font-family="Roboto" font-size="8.00">CharField</text>
+<text xml:space="preserve" text-anchor="start" x="537.09" y="-418.4" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="459.77" y="-404.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="467.77" y="-404.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">slug</text>
+<text xml:space="preserve" text-anchor="start" x="481.1" y="-404.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="497.09" y="-404.8" font-family="Roboto" font-size="8.00">    </text>
+<text xml:space="preserve" text-anchor="start" x="505.09" y="-404.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">SlugField</text>
+<text xml:space="preserve" text-anchor="start" x="536.21" y="-404.8" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="456.77,-398.4 456.77,-463.2 561.87,-463.2 561.87,-398.4 456.77,-398.4"/>
+</g>
+<!-- products_models_MenuItem&#45;&gt;products_models_Category -->
+<g id="edge10" class="edge">
+<title>products_models_MenuItem-&gt;products_models_Category</title>
+<path fill="none" stroke="black" d="M503.95,-576.37C505.31,-539.75 506.91,-496.69 508.01,-467.15"/>
+<ellipse fill="black" stroke="black" cx="503.8" cy="-580.54" rx="4" ry="4"/>
+<text xml:space="preserve" text-anchor="middle" x="542.59" y="-559.6" font-family="Roboto" font-size="8.00"> category (menu_items)</text>
+</g>
+</g>
+</svg>
