@@ -8,7 +8,7 @@ from rest_framework.response import Response
 @api_view(["GET"])
 def EndpointList(request):
     return Response({
-        "name": "Bi Nhe Store",
+        "name": "ServeMate",
         "version": "v1",
         "admin": "/admin/",
         "docs": "/docs/",

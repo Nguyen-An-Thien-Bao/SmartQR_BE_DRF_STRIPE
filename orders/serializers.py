@@ -1,5 +1,9 @@
+from django.utils import timezone
+
 from rest_framework import serializers
+import stripe
 from orders.models import Order, OrderItem
+from payments.models import Payment
 from products.models import MenuItem
 from products.serializers import MenuItemSerializer
 from rbac.serializers import UserSerializer
@@ -82,33 +86,97 @@ class OrderSerializer(serializers.ModelSerializer):
                 tenant_admin=tenant_admin
             )
 
+    # def create(self, validated_data):
+    #     items_data = validated_data.pop("items")
+    #     request = self.context["request"]
+
+    #     order = Order.objects.create(
+    #         table=validated_data.get("table"),
+    #         status="processing",
+    #         payment_status="unpaid",
+    #     )
+
+    #     total_price = 0
+
+    #     for item in items_data:
+    #         menu_item = item["menu_item"]
+    #         quantity = item["quantity"]
+    #         price = menu_item.price
+
+    #         total_price += price * quantity
+
+    #         OrderItem.objects.create(
+    #             order=order,
+    #             menu_item=menu_item,
+    #             quantity=quantity,
+    #             price=price
+    #         )
+
+    #     order.total_price = total_price
+    #     order.save()
+
+    #     return order
+
     def create(self, validated_data):
         items_data = validated_data.pop("items")
-        request = self.context["request"]
+        table = validated_data.get("table")
+        method = validated_data.get("method", "cash")
 
+        # --- Tạo Order ---
         order = Order.objects.create(
-            table=validated_data.get("table"),
+            table=table,
             status="processing",
             payment_status="unpaid",
+            total_price=0
         )
 
         total_price = 0
-
         for item in items_data:
             menu_item = item["menu_item"]
             quantity = item["quantity"]
             price = menu_item.price
-
             total_price += price * quantity
-
-            OrderItem.objects.create(
-                order=order,
-                menu_item=menu_item,
-                quantity=quantity,
-                price=price
-            )
+            OrderItem.objects.create(order=order, menu_item=menu_item, quantity=quantity, price=price)
 
         order.total_price = total_price
         order.save()
 
+        # --- Tạo Payment object ---
+        if method == "cash":
+            payment = Payment.objects.create(
+                order=order,
+                method="cash",
+                amount=total_price,
+                status="succeeded",  # cash thì coi là thanh toán ngay
+                currency="usd",
+            )
+            order.payment_status = "paid"
+            order.paid_at = timezone.now()
+            order.save()
+        elif method == "stripe":
+            import stripe
+            from django.conf import settings
+            stripe.api_key = settings.STRIPE_SECRET_KEY
+
+            intent = stripe.PaymentIntent.create(
+                amount=int(total_price * 100),
+                currency="usd",
+                metadata={"order_id": str(order.id)},
+            )
+
+            payment = Payment.objects.create(
+                order=order,
+                method="stripe",
+                amount=total_price,
+                stripe_payment_intent=intent.id,
+                status="pending",
+                currency="usd",
+            )
+
+            order.stripe_session_id = intent.id
+            order.save()
+
         return order
+
+    def get_items_detail(self, obj):
+        return [{"menu_item": i.menu_item.name, "quantity": i.quantity, "price": i.price} for i in obj.items.all()]

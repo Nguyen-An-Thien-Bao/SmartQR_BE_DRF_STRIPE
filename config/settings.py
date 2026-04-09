@@ -166,8 +166,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Bi Nhe Store API',
-    'DESCRIPTION': 'Ecommerce API documentation',
+    'TITLE': 'ServeMate API',
+    'DESCRIPTION': 'ServeMate API documentation',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
@@ -184,7 +184,7 @@ AUTH_USER_MODEL = "rbac.User"
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
 
-ORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -207,3 +207,5 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.ngrok-free\.app$",
 ]
+
+ALLOWED_HOSTS = ["*"]

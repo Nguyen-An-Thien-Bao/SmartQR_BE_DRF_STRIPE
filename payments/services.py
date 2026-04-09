@@ -33,8 +33,8 @@ class PaymentService:
             amount=int(total * 100),
             currency="usd",
             metadata={
-                "table": str(table),
-                "items": json.dumps(items),
+                "table_code": table,
+                "items": json.dumps(items)  # ✅ double quotes chuẩn JSON
             }
         )
 

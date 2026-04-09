@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.filters import SearchFilter
 from orders.models import Order
 from payments.services import PaymentService
+from utils.get_price import get_price
 from .models import Payment
 from .serializers import PaymentSerializer
 from rest_framework.decorators import api_view, permission_classes
@@ -25,6 +26,7 @@ def mark_order_paid(request, pk):
     if user.role not in ["tenantAdmin", "waiter"]:
         return Response({"error": "Permission denied"}, status=403)
 
+    method = request.data.get("method", "cash")
     order.payment_status = "paid"
     order.paid_at = timezone.now()
     order.save()
@@ -33,13 +35,15 @@ def mark_order_paid(request, pk):
         order=order,
         defaults={
             "amount": order.total_price,
-            "status": "succeeded"
+            "status": "succeeded",
+            "method": method
         }
     )
 
     if not created:
         payment.status = "succeeded"
         payment.amount = order.total_price
+        payment.method = method
         payment.save()
 
     return Response({
@@ -97,18 +101,18 @@ class PaymentViewSet(viewsets.ModelViewSet):
 @api_view(['POST'])
 @permission_classes([AllowAny])  # public QR
 def create_payment_intent(request):
-    items = request.data.get("items", [])
-    table = request.data.get("table")
+    data = request.data
+    items = data.get("items", [])
+    
+    # Tính tổng giá trị order
+    amount = sum(item['quantity'] * get_price(item['menu_item']) for item in items)
 
-    if not items or not table:
-        return Response({"error": "Invalid data"}, status=400)
-
-    try:
-        intent = PaymentService.create_payment_intent(table, items)
-
-        return Response({
-            "client_secret": intent.client_secret
-        })
-
-    except Exception as e:
-        return Response({"error": str(e)}, status=500)
+    intent = stripe.PaymentIntent.create(
+        amount=int(amount * 100),  # amount in cents
+        currency='usd',
+        metadata={
+            "table_code": data.get("table"),
+            "items": str(items)
+        },
+    )
+    return Response({"client_secret": intent.client_secret})
