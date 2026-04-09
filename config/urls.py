@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+
+from products.views import PublicMenuView
 from .views import EndpointList
 from drf_spectacular.views import (
     SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
@@ -34,4 +36,5 @@ urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    path("public/menu/<uuid:code>/", PublicMenuView.as_view())
 ]

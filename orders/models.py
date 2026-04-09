@@ -8,7 +8,7 @@ class Order(models.Model):
 
     STATUS_CHOICES = [
         ("processing", "Processing"),
-        ("Done", "Done"),
+        ("done", "Done"),
     ]
 
     PAYMENT_STATUS_CHOICES = [
@@ -89,7 +89,8 @@ class OrderItem(models.Model):
     )
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="pending")
     chef = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, limit_choices_to={"role": "chef"})
-    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.menu_item.name} x {self.quantity}"

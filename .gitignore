@@ -47,3 +47,6 @@ htmlcov/
 
 # Cache
 .cache/
+
+#document
+document/

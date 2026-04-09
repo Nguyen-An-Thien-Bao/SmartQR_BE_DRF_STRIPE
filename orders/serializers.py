@@ -1,13 +1,18 @@
 from rest_framework import serializers
 from orders.models import Order, OrderItem
 from products.models import MenuItem
+from products.serializers import MenuItemSerializer
+from rbac.serializers import UserSerializer
 from tables.models import Table
+from tables.serializers import TableSerializer
 
 
 class OrderItemSerializer(serializers.ModelSerializer):
+    menu_item = MenuItemSerializer(read_only=True)
+    chef = UserSerializer(read_only=True)
     class Meta:
         model = OrderItem
-        fields = ["id", "menu_item", "quantity", "price", "status", "chef"]
+        fields = ["id", "menu_item", "quantity", "price", "status", "chef", "created_at", "updated_at"]
         read_only_fields = ["price", "chef"]
 
 class OrderItemUpdateSerializer(serializers.ModelSerializer):
@@ -20,20 +25,40 @@ class OrderItemUpdateSerializer(serializers.ModelSerializer):
         if user.role == "chef" and instance.chef is None:
             instance.chef = user
         return super().update(instance, validated_data)
+    
+class OrderItemCreateSerializer(serializers.ModelSerializer):
+    menu_item = serializers.PrimaryKeyRelatedField(
+        queryset=MenuItem.objects.all()
+    )
+
+    class Meta:
+        model = OrderItem
+        fields = ["menu_item", "quantity"] 
 
 class OrderSerializer(serializers.ModelSerializer):
-    items = OrderItemSerializer(many=True)
+    items = OrderItemCreateSerializer(many=True, write_only=True)
+    items_detail = OrderItemSerializer(source="items", many=True, read_only=True)
+    # items = OrderItemCreateSerializer(many=True)
+    table = serializers.SlugRelatedField(
+        queryset=Table.objects.all(),
+        slug_field="code",
+        write_only=True
+    )
 
+    table_detail = TableSerializer(source="table", read_only=True)
     class Meta:
         model = Order
         fields = [
             "id",
-            "table", 
+            "table",
+            "table_detail",
             "status",
             "payment_status",
             "total_price",
             "items",
+            "items_detail",
             "created_at",
+            "updated_at"
         ]
         read_only_fields = [
             "payment_status",
@@ -46,7 +71,12 @@ class OrderSerializer(serializers.ModelSerializer):
         request = self.context.get('request')
 
         if request and request.user.is_authenticated:
-            tenant_admin = request.user
+            user = request.user
+
+            if user.role == "tenantAdmin":
+                tenant_admin = user
+            elif user.role == "waiter":
+                tenant_admin = user.created_by  # waiter
 
             self.fields['table'].queryset = Table.objects.filter(
                 tenant_admin=tenant_admin
@@ -58,7 +88,7 @@ class OrderSerializer(serializers.ModelSerializer):
 
         order = Order.objects.create(
             table=validated_data.get("table"),
-            status="pending",
+            status="processing",
             payment_status="unpaid",
         )
 

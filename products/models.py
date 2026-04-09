@@ -15,6 +15,8 @@ class Category(models.Model):
         on_delete=models.CASCADE,
         related_name="categories"
     )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -50,9 +52,12 @@ class MenuItem(models.Model):
     )
 
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    size = models.CharField(max_length=2, choices=SIZE_CHOICES, blank=True)
+    size = models.CharField(max_length=2, choices=SIZE_CHOICES, blank=True, default="S")
+    image_url = models.URLField(blank=True, null=True)
+    image_public_id = models.CharField(max_length=255, blank=True, null=True)
     description = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         unique_together = ["name", "size", "category", "belong_to"]

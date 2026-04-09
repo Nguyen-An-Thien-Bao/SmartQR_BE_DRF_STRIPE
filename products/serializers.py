@@ -1,9 +1,12 @@
 from rest_framework import serializers
+from services.cloudinary_service import CloudinaryService
 from .models import Category, MenuItem
 from utils.get_tenant_from_request import get_tenant_from_request
+from rbac.serializers import UserSerializer
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    belong_to = UserSerializer(read_only=True)
     class Meta:
         model = Category
         fields = "__all__"
@@ -25,11 +28,12 @@ class CategorySerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Category đã tồn tại")
 
         return data
-    
+
 
 class MenuItemSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(source="category.name", read_only=True)
-
+    image = serializers.ImageField(write_only=True, required=False)
+    belong_to = UserSerializer(read_only=True)
     class Meta:
         model = MenuItem
         fields = [
@@ -38,10 +42,13 @@ class MenuItemSerializer(serializers.ModelSerializer):
             "category",
             "category_name",
             "price",
+            "image",
+            "image_url",
             "size",
             "description",
-            "created_at",
             "belong_to",
+            "created_at",
+            "updated_at"
         ]
         read_only_fields = ["created_at", "belong_to"]
 
@@ -56,6 +63,28 @@ class MenuItemSerializer(serializers.ModelSerializer):
             self.fields['category'].queryset = Category.objects.filter(
                 belong_to=tenant_admin
             )
+
+    def create(self, validated_data):
+        image = validated_data.pop("image", None)
+
+        if image:
+            upload = CloudinaryService.upload_image(image)
+            validated_data["image_url"] = upload["url"]
+            validated_data["image_public_id"] = upload["public_id"]
+
+        return super().create(validated_data)
+    
+    def update(self, instance, validated_data):
+        image = validated_data.pop("image", None)
+
+        if image:
+            CloudinaryService.delete_image(instance.image_public_id)
+
+            upload = CloudinaryService.upload_image(image)
+            validated_data["image_url"] = upload["url"]
+            validated_data["image_public_id"] = upload["public_id"]
+
+        return super().update(instance, validated_data)
 
     def validate(self, data):
         request = self.context.get("request")
@@ -86,3 +115,18 @@ class MenuItemSerializer(serializers.ModelSerializer):
             )
 
         return data
+    
+class CategoryDetailSerializer(serializers.ModelSerializer):
+    menu_items = MenuItemSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Category
+        fields = [
+            "id",
+            "name",
+            "slug",
+            "belong_to",
+            "menu_items",
+            "created_at",
+            "updated_at"
+        ]
