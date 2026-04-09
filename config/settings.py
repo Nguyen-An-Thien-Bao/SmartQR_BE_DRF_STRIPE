@@ -10,9 +10,19 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+from datetime import timedelta
+
+import cloudinary
+import os
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
+
+cloudinary.config(
+    cloud_name=os.environ.get("CLOUDINARY_NAME"),
+    api_key=os.environ.get("CLOUDINARY_API_KEY"),
+    api_secret=os.environ.get("CLOUDINARY_API_SECRET")
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,6 +43,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "corsheaders",
     "rest_framework",
     "products",
     "orders",
@@ -49,10 +60,10 @@ INSTALLED_APPS = [
     'django_filters',
     "drf_spectacular",
     "django_extensions",
-    "corsheaders",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -61,7 +72,6 @@ MIDDLEWARE = [
     'logs.middleware.LogMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -144,7 +154,7 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
     ),
     'DEFAULT_PAGINATION_CLASS': 'config.pagination.DefaultPagination',
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': 20,
     "DEFAULT_FILTER_BACKENDS": (
         [
         "django_filters.rest_framework.DjangoFilterBackend",
@@ -162,10 +172,38 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
 }
 
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60), # Tăng lên 60 phút hoặc tùy ý
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ALGORITHM': 'HS256',
+    # ...
+}
+
 AUTH_USER_MODEL = "rbac.User"
 
-import os
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
 
-CORS_ALLOW_ALL_ORIGINS = True
+ORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+from corsheaders.defaults import default_headers
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "authorization",
+]
+
+from corsheaders.defaults import default_methods
+
+CORS_ALLOW_METHODS = list(default_methods)
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "https://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.ngrok-free\.app$",
+]

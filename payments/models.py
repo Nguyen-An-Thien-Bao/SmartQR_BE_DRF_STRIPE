@@ -9,10 +9,22 @@ class Payment(models.Model):
         ("failed", "Failed"),
     ]
 
+    
+    PAYMENT_METHOD_CHOICES = [
+        ("cash", "Cash"),
+        ("stripe", "Stripe"),
+    ]
+
     order = models.OneToOneField(
         Order,
         on_delete=models.CASCADE,
         related_name="payment"
+    )
+
+    method = models.CharField(
+        max_length=20,
+        choices=PAYMENT_METHOD_CHOICES,
+        default="cash"
     )
 
     stripe_payment_intent = models.CharField(max_length=255, blank=True)
@@ -28,6 +40,7 @@ class Payment(models.Model):
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
-
+    updated_at = models.DateTimeField(auto_now=True)
+    
     def __str__(self):
         return f"Payment for Order {self.order.id} - {self.status}"

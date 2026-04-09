@@ -2,9 +2,14 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import generics
 from config.permissions import IsAdminOrStaffOrReadOnly, IsTenantAdminOrReadOnly
 from rbac.models import User
-from rbac.serializers import RegisterSerializer, UserSerializer
+from rest_framework.filters import SearchFilter
+from rbac.serializers import CustomTokenSerializer, RegisterSerializer, UserSerializer, UserSerializerWithPassword
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 # Create your views here.
+class CustomTokenView(TokenObtainPairView):
+    serializer_class = CustomTokenSerializer
+
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
@@ -14,8 +19,10 @@ class RegisterView(generics.CreateAPIView):
 
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = UserSerializerWithPassword
     permission_classes = [IsAuthenticated, IsTenantAdminOrReadOnly]
+    filter_backends = [SearchFilter]
+    search_fields = ['username', "role", "email"]
 
     def get_queryset(self):
         user = self.request.user
@@ -36,5 +43,5 @@ class UserList(generics.ListAPIView):
 
 class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = UserSerializerWithPassword
     permission_classes = [IsAdminOrStaffOrReadOnly]

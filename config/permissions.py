@@ -13,6 +13,9 @@ class OwnerOrAdminPermission(BasePermission):
 
         if user.role == "admin":
             return obj.table.tenant_admin == user
+        
+        if user.role == "tenantAdmin":
+            return obj.table.tenant_admin == user
 
         if user.role in ["staff", "chef"]:
             return obj.table.tenant_admin == user.created_by
